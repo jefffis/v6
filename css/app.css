@@ -39,6 +39,9 @@ a:link {
 a:visited {
 	color : #094B61;
 }
+a:active {
+	opacity : .65;
+}
 strong {
 	color : #02212B;
 }
@@ -47,7 +50,7 @@ header {
 	position : fixed;
 	top : 0;
 	left : 0;
-	z-index : 2;
+	z-index : 3;
 	/*height : 100%;*/
 	width : 100%;
 	background : white;
@@ -150,8 +153,43 @@ header span {
 }
 
 #main {
-	display : none;
-	margin-top : 3.5rem;
+	/*display : none;*/
+}
+#main > div {
+	position : relative;
+	padding : 4rem 1rem;
+	border-top : 1px solid #ddd;
+}
+#main > div:before, #main > div:after {
+	display : block;
+	position : absolute;
+	top : -.5rem;
+	left : 0;
+	z-index : 2;
+	height : 1rem;
+	width : 100%;
+	background : url(../img/arrow-down.svg) no-repeat center;
+	background-size : 22px;
+	content : "";
+	text-align : center;
+}
+#main > div:before {
+	/*opacity : .5;*/
+}
+#main > div:after {
+	top : -1rem;
+	z-index : 1;
+	height : 2rem;
+	width : 2rem;
+	background : white;
+	/*border-radius : 100%;*/
+	margin-left : calc( (100% - 2rem) / 2 );
+	content : "";
+}
+#main > div div:first-child {
+	max-width : 30rem;
+	margin : auto;
+	/*padding : 0 1rem;*/
 }
 /*#main > div, #main > article {
 	max-width : 32.5rem;
@@ -164,7 +202,7 @@ header span {
 	padding : 3rem 2rem 1rem;
 	border-bottom : 1px solid #ddd;
 	font-weight : bold;
-}
+}*/
 #main > div p {
 	margin-bottom : 0;
 }
@@ -178,7 +216,14 @@ header span {
 	border-radius : 3px;
 	color : white;
 	text-decoration : none;
-}*/
+}
+#main > div p a:active {
+	background : #094B61;
+	opacity : 1;
+}
+#main h1 a {
+	text-decoration : none;
+}
 
 @media screen and (max-width : 374px) {
 
@@ -187,7 +232,11 @@ header span {
 	}*/
 	#intro {
 		margin : 5rem 0 0;
-		padding : 1.5rem;
+		padding : 2rem;
+	}
+	#main > div {
+		padding-left : 2rem;
+		padding-right : 2rem;
 	}
 	h1 {
 		font-size : 23px;
@@ -197,10 +246,10 @@ header span {
 
 @media screen and (max-width : 549px) {
 
-	#intro {
+	/*#intro {
 		margin : 5rem 0 0;
 		padding : 1.5rem;
-	}
+	}*/
 
 }
 
