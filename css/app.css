@@ -58,7 +58,7 @@ header {
 	/*background : rgba(0, 0, 0, 0.05);*/
 	/*background: -webkit-linear-gradient(left, white 0%,rgba(0, 0, 0, 0.05) 100%);*/
 	/*padding : 2rem;*/
-	border-bottom : 1px solid #ddd;
+	box-shadow : 0 1px 0 rgba(0, 0, 0, 0.125);
 	text-align : center;
 }
 header > a {
@@ -159,9 +159,12 @@ header span {
 #main > div {
 	position : relative;
 	padding : 4rem 1.5rem;
-	border-top : 1px solid #ddd;
+	border-top : 1px solid rgba(0, 0, 0, 0.075);
 }
-#main > div:first-child:before, #main > div:first-child:after {
+#main > div:first-child {
+	border-top : 0;
+}
+/*#main > div:first-child:before, #main > div:first-child:after {
 	display : block;
 	position : absolute;
 	top : -.5rem;
@@ -182,9 +185,9 @@ header span {
 	background : white;
 	margin-left : calc( (100% - 2rem) / 2 );
 	border-radius : 100%;
-	box-shadow : 0 0 0 1px #ddd;
+	box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.075);
 	content : "";
-}
+}*/
 /*#main > div:first-child:after {
 	box-shadow : 0 0 0 1px #ddd;
 }*/
@@ -226,15 +229,32 @@ header span {
 #main h1 a {
 	text-decoration : none;
 }
+#main h1:before {
+	display : block;
+	margin-bottom : .5rem;
+	/*padding-left : .5rem;*/
+	/*border-left : 2px solid #ddd;*/
+	content : "A project";
+	color : #999;
+	font-size : 13px;
+	font-weight : bold; 
+	letter-spacing : 1px;
+	line-height : 1;
+	text-transform : uppercase;
+}
+#main .writing:before {
+	content : "A musing";
+}
 
 #portfolio {
-	background : #efefef;
+	background : #278EB0;
 	padding : 7rem 3rem 4rem;
-	border-radius : 3px;
 	text-align : center;
 }
 #portfolio h1 {
 	margin-bottom : 2rem;
+	padding : 0 1rem;
+	color : white;
 }
 #portfolio figure {
 	display : inline-block;
@@ -288,7 +308,9 @@ header span {
 	left : 0;
 	width : 100%;
 	margin : 1rem 0 0;
+	color : white;
 	font-size : 1.25rem;
+	font-weight : bold;
 }
 #portfolio figure:hover h1 {
 	/*visibility : visible;*/
