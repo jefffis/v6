@@ -47,6 +47,12 @@ h1, h2, h3, strong {
 	color : #02212B;
 }
 
+hr {
+	height : 1px;
+	background : rgba(0, 0, 0, 0.075);
+	margin : 4rem 0;
+}
+
 header {
 	position : fixed;
 	top : 0;
@@ -122,8 +128,6 @@ nav a {
 nav a:active {
 	background : rgba(0, 0, 0, 0.025);
 }
-nav a:focus {
-}
 header span {
 	display : inline-block;
 	float : left;
@@ -139,10 +143,22 @@ header span {
 	text-align : left;
 }
 
+#intro, #main > div {
+	max-width : 32.5rem;
+	/*margin : 10rem auto 3rem;*/
+	margin : auto;
+	/*padding : 4rem 1.5rem;*/
+	padding : 0 30px;
+	/*border-top : 1px solid rgba(0, 0, 0, 0.075);*/
+}
 #intro {
-	max-width : 30rem;
-	margin : 10rem auto 3rem;
-	padding : 0 1.5rem;
+	margin-bottom : 3rem;
+}
+#intro h3 {
+	color : #ccc;
+	font-size : 13px;
+	text-align : right;
+	text-transform : lowercase;
 }
 #intro img {
 	display : block;
@@ -155,11 +171,11 @@ header span {
 
 #main {
 	/*display : none;*/
+	padding-top : 4rem;
 }
 #main > div {
 	position : relative;
-	padding : 4rem 1.5rem;
-	border-top : 1px solid rgba(0, 0, 0, 0.075);
+	/*border-top : 1px solid rgba(0, 0, 0, 0.075);*/
 }
 #main > div:first-child {
 	border-top : 0;
@@ -248,11 +264,13 @@ header span {
 
 #portfolio {
 	background : #278EB0;
+	background : -webkit-linear-gradient(45deg, #278eb0 0%,#61caed 50%,#0fbdf7 100%);
 	padding : 7rem 3rem 4rem;
 	text-align : center;
+	text-shadow : 0 1px 1px #278eb0;
 }
 #portfolio h1 {
-	margin-bottom : 2rem;
+	margin-bottom : 2.5rem;
 	padding : 0 1rem;
 	color : white;
 }
@@ -318,17 +336,17 @@ header span {
 
 @media screen and (max-width : 374px) {
 
-	/*nav a:last-child {
+	nav a:last-child {
 		display : none;
-	}*/
-	#intro {
-		margin : 5rem 0 0;
-		padding : 2rem;
+	}
+	/*#intro {
+		padding-left : 2rem;
+		padding-right : 2rem;
 	}
 	#main > div {
 		padding-left : 2rem;
 		padding-right : 2rem;
-	}
+	}*/
 	h1 {
 		font-size : 23px;
 	}
@@ -345,23 +363,18 @@ header span {
 		margin-top : 3rem;
 	}
 
-	/*#intro {
-		margin : 5rem 0 0;
-		padding : 1.5rem;
-	}*/
-
 }
 
 @media screen and ( min-width : 550px ) and ( min-height : 700px ){
 
-	#intro {
+	/*#intro {
 		margin-top : 15rem;
 		padding : 0;
-	}
+	}*/
 
 }
 
-@media screen and (min-width : 600px) {
+/*@media screen and (min-width : 600px) {
 
 	#main > div div:first-child {
 		padding : 0 1.5rem;
@@ -375,7 +388,7 @@ header span {
 		padding : 0;
 	}
 
-}
+}*/
 
 @media screen and (min-width : 50rem) {
 
