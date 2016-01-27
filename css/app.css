@@ -144,7 +144,7 @@ header span {
 }
 
 #intro, #main > div {
-	max-width : 32.5rem;
+	max-width : 35rem;
 	/*margin : 10rem auto 3rem;*/
 	margin : auto;
 	/*padding : 4rem 1.5rem;*/
@@ -264,10 +264,11 @@ header span {
 
 #portfolio {
 	background : #278EB0;
-	background : -webkit-linear-gradient(45deg, #278eb0 0%,#61caed 50%,#0fbdf7 100%);
+	/*background : #278EB0;*/
+	/*background : -webkit-linear-gradient(45deg, #278eb0 0%,#61caed 50%,#0fbdf7 100%);*/
 	padding : 7rem 3rem 4rem;
 	text-align : center;
-	text-shadow : 0 1px 1px #278eb0;
+	/*text-shadow : 0 1px 1px #87C496;*/
 }
 #portfolio h1 {
 	margin-bottom : 2.5rem;
@@ -281,7 +282,7 @@ header span {
 	background : white;
 	margin : 0 2rem 2rem;
 	padding : 50px 15px 65px;
-	border-radius : 12px;
+	border-radius : 17px;
 	box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.075);
 }
 #portfolio figure:before, #portfolio figure:after {
